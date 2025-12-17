@@ -13,5 +13,5 @@ if "%WAIT_FOR_COMPLETION%"=="1" (
 
 for %%t in (%THRESHOLDS%) do (
     echo Running with threshold: %%t
-    %CMD_MAT% "try, BIN_DIR = fullfile(pwd, '.', 'BIN'); addpath(genpath(BIN_DIR)); process_att(%%t); catch e, disp(e.message); end; exit;"
+    %CMD_MAT% "try, process_att(%%t); catch e, disp(e.message); end; exit;"
 )
