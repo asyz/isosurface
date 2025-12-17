@@ -1,5 +1,5 @@
-# isosurface
-plotting snowflake crystal particles (from OpenSSP) using MATLAB functions isosurface
+# isosurface plotting
+The package is used to plot snowflake crystal particles (from OpenSSP) by using the MATLAB function isosurface.
 
 # File list
 run_att.sh     :  run script for Linux/MacOS
@@ -14,10 +14,13 @@ stl_write.m    :  writing .stl file based on the read-in .att file
 
 list_att_files.txt:  input file for process_att.m, with a list of .att file for plotting
 
-p-08: contains several sample particle files from OpenSSP
+p-08: a folder contains several sample particle files from OpenSSP
+
+plots: a folder contanis several generated plots
 
 # Introduction
-A snowflake crystal particle file (./p-08/.att) contains a regular 3-D grid array in Cartesian Geometry, with each element representing the material type/density (e.g. 0 for air, 1 for ice).
+A snowflake crystal particle file (./p-08/.att) contains a regular 3-D grid array in Cartesian Geometry, with each element representing the material type/density of the corresponding voxel (e.g. 0 for air, 1 for ice).
+
 
 After reading in the 3-D array from a .att file, process_att.m performs four operations before rendering the plot:
 
