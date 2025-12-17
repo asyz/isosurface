@@ -72,24 +72,24 @@ function process_att(threshold_val)
             %averaging by 3x3x3 cube equal weighting
             dat = convn(dat,b_conv,'same');
         elseif contains(opt_wgt, 'Dilate', 'IgnoreCase', true)
-    	se_opt = 'cube';
-    	se = strel(se_opt, 3); 
+            se_opt = 'cube';
+            se = strel(se_opt, 3); 
             dat = imdilate(dat, se);
             opt_wgt = ['_Dilate' se_opt];
         elseif contains(opt_wgt, 'imopen', 'IgnoreCase', true)
-    	se_opt = 'cube';
-    	se = strel(se_opt, 3); 
+            se_opt = 'cube';
+    	    se = strel(se_opt, 3); 
             dat = imopen(dat, se);
             dat = convn(dat,b_conv,'same');
             opt_wgt = ['_imopen' se_opt 'Gauss'];
         elseif contains(opt_wgt, 'imclose', 'IgnoreCase', true)
-    	se_opt = 'cube';
-    	se = strel(se_opt, 3); 
+            se_opt = 'cube';
+    	    se = strel(se_opt, 3); 
             dat = imclose(dat, se);
             dat = convn(dat,b_conv,'same');
             opt_wgt = ['_imclose' se_opt 'Gauss'];
         elseif contains(opt_wgt, 'bwperim', 'IgnoreCase', true)
-    	se_opt = '26';
+            se_opt = '26';
             dat = bwperim(dat, 26);
             opt_wgt = ['_bwperim' se_opt];
         else
