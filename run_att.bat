@@ -1,6 +1,5 @@
 @echo off
 REM Windows batch script to run process_att.m
-REM Assumes BIN directory is at ..\BIN relative to this script
 
 set "THRESHOLDS=0.988 0.993 0.996"
 set "WAIT_FOR_COMPLETION=0"
