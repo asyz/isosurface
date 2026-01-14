@@ -34,4 +34,6 @@ After reading in the 3-D array from a .att file, process_att.m performs four ope
 
 These operations are intened to smooth the particle surface while retaining key details of the particle shape. The coplannar operation identifies groups of neighboring coplannar triangles by evaluating each triangle's normal vector. If the inner product of two normal verctors is greater than a user-specifed threshold (e.g. 0.999), the two corresponding triangles are considered to be in the same coplannar group. Only the outer boundary of a coplannar group of triangles will be plotted. 
    
+# Plotting
 
+After the isosurfaces of a snow crystal particle was generated using the MATLAB isosurface() function, the patch() function was used to render the surface trangles without plotting their edges. The outer edges of each identified coplannar group was added to the plot later on by using the MATLAB line plotting function plot3(). The three sample plots in the ./plots subfolder were generated with coplannar thresholds: 0.996, 0.993, and 0.988, respectively. With smaller thershold, the coplannar operation will identify fewer number of coplannar groups, as more neighboring triangles would be grouped together. The threshold values can be specified in the run script.    
