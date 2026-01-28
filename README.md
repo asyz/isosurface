@@ -1,5 +1,5 @@
 # isosurface plotting
-The package is used to plot snowflake crystal particles (from OpenSSP) by using the MATLAB function isosurface.
+The package plots snowflake crystal particles (from OpenSSP) by using the MATLAB function isosurface.
 
 # File list
 run_att.sh     :  run script for Linux/MacOS
@@ -36,4 +36,5 @@ These operations are intened to smooth the particle surface while retaining key 
    
 # Plotting
 
-After the isosurfaces of a snow crystal particle was generated using the MATLAB isosurface() function, the patch() function was used to render the surface trangles without plotting their edges. The outer edges of each identified coplannar group was added to the plot later on by using the MATLAB line plotting function plot3(). The three sample plots in the ./plots subfolder were generated with coplannar thresholds: 0.996, 0.993, and 0.988, respectively. With smaller thershold, the coplannar operation will identify fewer number of coplannar groups, as more neighboring triangles would be grouped together. The threshold values can be specified in the run script.    
+After the isosurfaces of a snow crystal particle was generated using the MATLAB isosurface() function, the patch() function was used to render the surface trangles without plotting their edges. The outer edges of each identified coplannar group was added to the plot later on by using the MATLAB line plotting function plot3(). The three sample plots in the ./plots subfolder were generated with coplannar thresholds: 0.996, 0.993, and 0.988, respectively. With smaller thershold, the coplannar operation will identify fewer number of coplannar groups, as more neighboring triangles would be grouped together. The threshold values can be specified in the run script.   
+ 

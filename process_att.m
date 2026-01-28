@@ -1,6 +1,7 @@
 %{
 Testing matlab isosurface() and other functions for rendering snowflake .att files. 
 utilty functions: readAtt.m  stl_write.m
+input file, list_att_files.txt, contains a list of snowflake .att files
 %}
 function process_att(threshold_val)
     if nargin < 1
